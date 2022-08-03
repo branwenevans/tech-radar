@@ -1,0 +1,91 @@
+name,ring,quadrant,isNew,description
+Open Telementry,Adopt,Tools,FALSE,<p>By default Open Telemetry should be used wherever we add new instrumentation.</p>
+Miro,Adopt,Tools,FALSE,<p>Miro should be the default choice for diagramming / visualizations.</p>
+Jenkins (for build agents),Adopt,Tools,FALSE,<p>For now we won't be seriously exploring alternatives to Jenkins.</p>
+Terraform,Adopt,Tools,FALSE,<p>Best-in-class infrastructure as code tool</p>
+Ansible,Adopt,Tools,FALSE,<p>Best-in-class infrastructure as code tool</p>
+Packer,Adopt,Tools,FALSE,<p>Best-in-class infrastructure as code tool</p>
+Grafana,Adopt,Tools,FALSE,"<p>Unity ES/SRE centrally supported and low cost.</p>
+<p>Should be the default for visualizing data.</p>"
+Concourse,Adopt,Tools,FALSE,<p>Concourse should be our default for all image-building pipelines.</p>
+Postgres,Adopt,Tools,FALSE,<p>Postgres should be the default choice whenever a relational database is called for.</p>
+Artifactory,Adopt,Tools,FALSE,<p>Default for all artifact management.</p>
+Confluence,Trial,Tools,FALSE,"<p>Confluence has a lot of value as a way to index artifacts which may exist in other locations, eg. documents in Google drive, diagrams in Miro.</p>
+<p>We need to determine how we could use Confluence more effectively and if it makes sense to invest in it further.</p>"
+PlantUML,Assess,Tools,FALSE,<p>Used for creating diagrams from plain text. Needs evaluation before we recommend wide-use.</p>
+Podman,Assess,Tools,FALSE,<p>Needs a full assessment before we commit to trialing Podman in place of Docker.</p>
+K3s,Assess,Tools,FALSE,<p>Needs a full assessment before we commit to trialing as a replacement for K8s.</p>
+Lucid charts,Assess,Tools,FALSE,"<p>Prefer using Miro if appropriate. Lucid does seem to meet some needs that Miro doesn't, so we should assess if/when Lucid should be the default tool.</p>"
+Google Drive,Assess,Tools,FALSE,"<p>We already use Google drive for documentation widely, but not exclusively.</p>
+<p>We want to start trying to use Google drive more effectively, and determine if/where it should become a team-wide default.</p>"
+honeycomb.io,Assess,Tools,FALSE,"<p>Assess as part of improving system observability, but don't make any decisions which require a longer term commitment to honeycomb.io yet.</p>"
+Puppet,Hold,Tools,FALSE,"<p>Avoid using Puppet unless there is no alternative, and plan to move away from Puppet wherever possible preferably Ansible.</p>"
+PRE Prometheus,Hold,Tools,TRUE,"<p>While using Prometheus with Open Telemetry is convenient, the PRE managed Prometheus has been deprecated, so we should not use it.</p>"
+CloudBees CICD,Hold,Tools,FALSE,"<p>CloudBees CICD does not currently seem to be meeting all of our long-term needs, we should avoid adding new dependencies on CloudBees (and should start to consider alternatives)</p>"
+Data Studio,Hold,Tools,FALSE,"<p>Don't add any new dashboards to Data Studio, consider migrating existing dashboards when updating or extending them.</p>"
+Mongo,Hold,Tools,FALSE,<p>Using Mongo as we currently do for build service is undesirable. We should not add any further dependencies on Mongo when dealing with relational data.</p>
+Docker (as a buildbot runtime),Hold,Tools,FALSE,"<p>Running Unity in Docker is not currently feasible, so we shouldn't make any plans that rely on this for the time being.</p>"
+draw.io,Hold,Tools,FALSE,"<p>Use a non-Hold tool for new diagrams unless there are specific draw.io features that you cannot do without for a specific application.</p>
+<p>When editing existing draw.io diagrams, try to move them to one of the other tools.</p>"
+Ruby / Rails,Hold,languages-and-frameworks,FALSE,"<p>No new usages of Ruby.</p>
+<p>Plan to start migrating existing Ruby code.</p>"
+Python,Hold,languages-and-frameworks,FALSE,<p>No new usages of Python.</p>
+Angular,Hold,languages-and-frameworks,FALSE,<p>No new usages of Angular. Existing Angular code should be migrated to React.</p>
+Javascript (vanilla),Hold,languages-and-frameworks,FALSE,"<p>No new usages of vanilla Javascript, Typescript should be adopted instead.</p>"
+Bash,Hold,languages-and-frameworks,FALSE,<p>No new usages of Bash. Consider Powershell Core instead.</p>
+Powershell,Hold,languages-and-frameworks,FALSE,<p>No new usages of Powershell. Consider Powershell Core instead.</p>
+C#,Trial,languages-and-frameworks,FALSE,"<p>Current team usage of C# is minimal, but C# remains widely-used within Unity. Consider trialing C# where a different Adopt language doesn't seem as appropriate.</p>"
+Typescript,Trial,languages-and-frameworks,FALSE,<p>Existing vanilla JS code should be migrated to Typescript if/when practical.</p>
+Powershell core,Assess,languages-and-frameworks,FALSE,<p>A promising multi-platform alternative to Powershell which needs further investigation.</p>
+Web components,Assess,languages-and-frameworks,FALSE,"<p>Promising, but needs investigation to determine if worth trialing in the front-end.</p>"
+Next.js,Assess,languages-and-frameworks,FALSE,"<p>Promising, but needs investigation to determine if worth trialing in the front-end.</p>"
+Go,Adopt,languages-and-frameworks,FALSE,"<p>Go should be the language of choice for new CLIs, and for services where there is no strong argument for using Node.js</p>"
+Node.js,Adopt,languages-and-frameworks,FALSE,"<p>We want to continue using node.js as a framework for existing services (ie. we don't plan to migrate) and for new services when appropriate - particularly for services which the Web team may want to make changes in.</p>
+<p>Not to be conflated with using vanilla Javascript which we want to move away from in favor of Typescript</p>"
+Swagger,Adopt,languages-and-frameworks,FALSE,<p>Should be the default for creating and documenting REST APIs.</p>
+Mongoose,Hold,Platforms,FALSE,"<p>Avoid adding additional dependencies on Mongoose specific functionality.</p>
+<p>Where possible, make choices that will make migrating to an alternative ORM as easy as possible.</p>"
+VMWare,Hold,Platforms,FALSE,<p>Avoid further investments in VMWare unless absolutely necessary for system continuity.</p>
+Object Rocket Mongo,Hold,Platforms,FALSE,<p>No new databases should be created using Object Rocket. Plan for existing databases to be moved when practical.</p>
+Linux Runners,Hold,Platforms,FALSE,<p>Lack of support for Unity on Linux means that Linux build agents are currently on hold.</p>
+SQS,Hold,Platforms,FALSE,"<p>No new dependecies on SQS should be added.</p>
+<p>Plan to migrate existing SQS queues.</p>"
+Logz.io,Hold,Platforms,FALSE,<p>Don't add new dependencies on Logz.io.</p>
+PRE Kronos,Hold,Platforms,FALSE,<p>Do not use Kronos - we want to consolidate technologies and use Datadog instead.</p>
+Terraform Enterprise,Hold,Platforms,FALSE,<p>There has been Unity discussion around Terraform Enterprise. While we want continue to use Terraform in UCB we do not want to commit to using Terraform Enterprise.</p>
+Looker,Hold,Platforms,FALSE,"<p>Choose BigQuery instead, for dealing with data sets. Choose Grafana for dashboards and visualizations.</p>"
+AWS,Hold,Platforms,FALSE,"<p>No new dependencies on AWS specific technologies should be added.</p>
+<p>Operate on the assumption that we may want to use AWS at some point in the future.</p>"
+Azure,Adopt,Platforms,FALSE,<p>Plan to use Azure for new cloud dependencies.</p>
+Azure App Service,Assess,Platforms,FALSE,<p>Needs to be assessed to decide if it's worth pursuing as an alternative to K8s.</p>
+GCP,Hold,Platforms,FALSE,"<p>No new dependencies on GCP specific technologies should be added.</p>
+<p>Operate on the assumption that we may want to use GCP again at some point in the future.</p>"
+GCP Cloud Run,Hold,Platforms,FALSE,<p>No new dependencies on GCP specific technologies should be added.</p>
+Google Container Registry,Hold,Platforms,FALSE,<p>No new dependencies on GCP specific technologies should be added.</p>
+Mongo Atlas,Assess,Platforms,FALSE,<p>Atlas provides significant observability and support. Plan for moving existing mongo databases to Atlas.</p>
+Bokken Windows,Assess,Platforms,FALSE,<p>We know that we will be using Bokken at some point in the future. We want to start assessing what it would mean to use Bokken to run our Windows OS based builds.</p>
+Bokken Mac,Assess,Platforms,FALSE,<p>We know that we will be using Bokken at some point in the future. We want to start assessing what it would mean to use Bokken to run our Mac OS based builds.</p>
+Anka,Assess,Platforms,FALSE,<p>We need to start evaluating Anka as an alternative to VMWare.</p>
+Orka,Assess,Platforms,FALSE,<p>We need to start evaluating Anka as an alternative to VMWare.</p>
+Datadog Logs,Trial,Platforms,FALSE,<p>Moving logging into Datadog may be beneficial.</p>
+Datadog Metrics,Trial,Platforms,FALSE,"<p>Using Datadog for metrics seems to be a good option which should meet most of our needs, and is cost-effective. Needs to be trialed before we commit to a large-scale investment.</p>"
+Datadog APM,Trial,Platforms,FALSE,"<p>Datadog APM may provide some very low effort observability, but still requires research.</p>"
+BigQuery,Adopt,Platforms,FALSE,<p>Should be our default for creating and dealing with data sets.</p>
+Helm,Adopt,Platforms,FALSE,<p>Should be our default for managing K8s.</p>
+Vault,Adopt,Platforms,FALSE,<p>Vault should be our default when dealing with secrets.</p>
+Self-hosted databases,Hold,Platforms,FALSE,"<p>Do not self-host any databases. Use a cloud provider (GCP, AWS, Azure) and plan to remain as cloud agnostic as possible, to enable moving databases to alternative cloud providers.</p>"
+Using other teams’ services,Hold,Techniques,FALSE,"<p>By default, do not add new dependencies on services / infrastructure owned by teams outside of Cloud Devops.</p>"
+Serverless,Assess,Techniques,FALSE,<p>More research needs to be done before we can decide if it's worth us investing in running serverless apps.</p>
+No-ops K8s,Assess,Techniques,FALSE,"<p>This goes hand-in-hand with assessing Serverless - if we do see benefits to trialing serverless apps, NoOps K8s is likely a good place to start more specific research.</p>"
+Command line tools,Assess,Techniques,FALSE,"<p>There may be benefits to creating more command line tools for internal use, we need to do some assessment here as to what the benefits would be and what the alternatives are (tools with web front-ends? no tools at all?)</p>"
+ChatOps,Assess,Techniques,FALSE,<p>We're interested in the idea of ChatOps. We need to put some thought into where (if anywhere) we might benefit from using ChatOps to solve either internal or user-facing issues.</p>
+blue/green deployments,Assess,Techniques,FALSE,<p>We believe that we would greatly benefit from blue/green deploys - we often need to deploy fairly significant changes and often have no way of rolling back other than deploying again. We want to research where specifically in our system blue/green deployments are likely to be most useful and practical before moving on to a trial.</p>
+Mono repos,Assess,Techniques,FALSE,"<p>We're interested in the idea of mono-repos, but don't yet have a strong argument for trialing them. Further research is needed to determine how/where we'd benefit most, and what the specific trade-offs would be.</p>"
+A/B testing,Trial,Techniques,FALSE,<p>Testing Cloud Build is hard. Being able to easily A/B test in production would give us greater confidence in our more significant releases. We would like to trial A/B testing in one part of the system to determine if it's something we want to use more widely.</p>
+Automatic code generation,Trial,Techniques,FALSE,<p>Try out some tools for automatic code generation to determine if we would benefit from them.</p>
+Dynamic cloud environments,Trial,Techniques,FALSE,"<p>In the future we want to be able to build in multiple cloud environments and be able to dynamically determine where to build. This is not something we will be able to support in the near future, but knowing that we want to do this may inform some of our choices and there may be research we can do here.</p>"
+Modular code,Adopt,Techniques,FALSE,"<p>New code should be as modular as possible. Where practical, refactor existing code to be more modular.</p>"
+Feature flags,Adopt,Techniques,FALSE,<p>Add feature flags whenever practical.</p>
+Micro services,Adopt,Techniques,FALSE,"<p>When practical, create new micro-services rather than adding to a monolith.</p>"
+Containerization,Adopt,Techniques,FALSE,<p>Generally have a bias towards being able to run in a container. Construct hard to run toolchains to use containers.</p>
+Pair Programming,Trial,Techniques,FALSE,"<p>Within our teams we should try out Pair Programming (or a similar technique) as a way to allow collaboration, encourage shared understanding, and standaradize practices and tooling.</p>"
