@@ -22,7 +22,7 @@ Google Drive,Assess,Tools,FALSE,"<p>We already use Google drive for documentatio
 <p>We want to start trying to use Google drive more effectively, and determine if/where it should become a team-wide default.</p>"
 honeycomb.io,Assess,Tools,FALSE,"<p>Assess as part of improving system observability, but don't make any decisions which require a longer term commitment to honeycomb.io yet.</p>"
 Puppet,Hold,Tools,FALSE,"<p>Avoid using Puppet unless there is no alternative, and plan to move away from Puppet wherever possible preferably Ansible.</p>"
-PRE Prometheus,Hold,Tools,TRUE,"<p>While using Prometheus with Open Telemetry is convenient, the PRE managed Prometheus has been deprecated, so we should not use it.</p>"
+PRE Prometheus,Hold,Tools,FALSE,"<p>While using Prometheus with Open Telemetry is convenient, the PRE managed Prometheus has been deprecated, so we should not use it.</p>"
 CloudBees CICD,Hold,Tools,FALSE,"<p>CloudBees CICD does not currently seem to be meeting all of our long-term needs, we should avoid adding new dependencies on CloudBees (and should start to consider alternatives)</p>"
 GitHub Actions,Assess,Tools,FALSE,<p>It may be viable for us to start using GitHub Actions. There were some CI system comparisons made in the past which should be revisited so taht we can determine if GitHub Actions has matured sufficiently.</p>
 Data Studio,Hold,Tools,FALSE,"<p>Don't add any new dashboards to Data Studio, consider migrating existing dashboards when updating or extending them.</p>"
